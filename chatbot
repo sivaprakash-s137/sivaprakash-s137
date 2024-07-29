@@ -1,0 +1,18 @@
+rules = {
+   "hello": "Hi! How can I help you today?",
+   "hi": "Hello!What's on your mind?",
+   "how are you": "I'm doing well, thanks for asking!",
+   "what is your name": "My name is ChatBot",
+   "exit": "Goodbye! Have a great day!"
+}
+
+def chatbot():
+  while True:
+    user_input = input("You: ").lower()
+    if user_input in rules:
+      print("ChatBot:",rules[user_input])
+    elif user_input == "exit":
+      print("ChatBot:",rules["exit"])
+    else:
+      print("ChatBot: Sorry, I didn't understand that.")
+chatbot()
